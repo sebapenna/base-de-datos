@@ -35,7 +35,7 @@ generos que Polanski. ¿Y que Scorsese? ¿Y que Tarantino?
 
 
 * g) Mostrar el año de la ultima pelicula.
-
+  * π year movies - π m.year ((ρ m movies) ⨝ m.year<movies.year movies)
 
 * h) Listar las peliculas del ultimo año.
 
