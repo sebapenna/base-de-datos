@@ -38,6 +38,8 @@ generos que Polanski. ¿Y que Scorsese? ¿Y que Tarantino?
   * π year movies - π m.year ((ρ m movies) ⨝ m.year<movies.year movies)
 
 * h) Listar las peliculas del ultimo año.
+  * last_year = π year movies - π m.year ((ρ m movies) ⨝ m.year<movies.year movies)
+  * (ρ LL last_year) ⨝ year=movies.year movies
 
 
 * i) Listar las peliculas del director Hitchcock en las que actuo Carroll.
