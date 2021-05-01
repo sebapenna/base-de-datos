@@ -22,6 +22,8 @@
 
 
 * e) ¿Algun director abarca todo los generos?
+  * (π directors_genres.director_id,directors_genres.genre directors_genres) ÷ (π directors_genres.genre directors_genres)
+    * No 
 
 
 * f ) Mostrar el nombre y apellido de los directores que abarcaron (al menos) los mismos
