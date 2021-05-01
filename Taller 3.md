@@ -56,3 +56,9 @@ generos que Polanski. ¿Y que Scorsese? ¿Y que Tarantino?
   * hitchcock_movies - (π HM.id,HM.name hitchcock_carroll_movies)
 
 * k) Listar los actores que participan de al menos 3 pelıculas.
+  * actors_movies = π actor_id,roles.movie_id roles
+  * am1 = ρ p1 actors_movies
+  * am2 = ρ p2 actors_movies
+  * am3 = ρ p3 actors_movies
+  * a3_movies = π p1.actor_id (σ p1.movie_id≠p2.movie_id ∧ p1.movie_id≠p3.movie_id ∧ p2.movie_id≠p3.movie_id (π p1.actor_id,p1.movie_id,p2.movie_id,p3.movie_id ((am1 ⨝ p1.actor_id=p2.actor_id am2) ⨝ p2.actor_id=p3.actor_id am3)))
+  * a3_movies ⨝ actor_id=actors.id actors
