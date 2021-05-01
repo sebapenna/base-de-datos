@@ -28,6 +28,10 @@
 
 * f ) Mostrar el nombre y apellido de los directores que abarcaron (al menos) los mismos
 generos que Polanski. ¿Y que Scorsese? ¿Y que Tarantino?
+  * polanski = σ directors.last_name='Polanski' directors
+  * polanski_genres = π directors_genres.genre (directors_genres ⨝ director_id=directors.id polanski)
+  * all_directors_genres = π directors_genres.director_id,directors_genres.genre directors_genres
+  * π directors.first_name, directors.last_name (directors ⨝ id=directors_genres.director_id (all_directors_genres ÷ polanski_genres))
 
 
 * g) Mostrar el año de la ultima pelicula.
