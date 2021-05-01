@@ -50,6 +50,9 @@ generos que Polanski. ¿Y que Scorsese? ¿Y que Tarantino?
 
 
 * j) Listar las peliculas del director Hitchcock en las que NO actuo Carroll.
-
+  * hitchcock = σ last_name='Hitchcock' directors
+  * hitchcock_movies = ρ HM (π movies.id,movies.name (movies ⨝ movies.id=movies_directors.movie_id (movies_directors ⨝ director_id=directors.id hitchcock)))
+  * hitchcock_carroll_movies = (roles ⨝ movie_id=HM.id hitchcock_movies) ⨝ roles.actor_id=actors.id (σ actors.last_name='Carroll' actors)
+  * hitchcock_movies - (π HM.id,HM.name hitchcock_carroll_movies)
 
 * k) Listar los actores que participan de al menos 3 pelıculas.
