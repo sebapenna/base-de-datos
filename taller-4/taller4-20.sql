@@ -10,11 +10,3 @@ LEFT OUTER JOIN materias m USING (codigo)
 LEFT OUTER JOIN notas n USING (codigo, numero)
 GROUP BY d.codigo
 ORDER BY COUNT(DISTINCT m.numero) DESC;
-
--- Respuesta clase
-SELECT d.codigo, d.nombre, COUNT(DISTINCT m.numero), COUNT(*)
-FROM departamentos d 
-LEFT OUTER JOIN materias m USING(codigo)
-LEFT OUTER JOIN notas n USING (codigo, numero)
-GROUP BY d.codigo, d.nombre
-ORDER BY COUNT(DISTINCT m.numero) DESC
